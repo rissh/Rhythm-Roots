@@ -10,71 +10,58 @@ function Footer() {
           </p>
         </div>
         <div>
-          <h2 className="text-white text-lg font-semibold mb-4">Quick Links</h2>
+          <h2 className="text-white text-lg font-semibold mb-4 justify-center items-center">
+            Quick Links
+          </h2>
           <ul>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                Courses
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-white transition-colors duration-300"
-              >
-                Contact
-              </a>
-            </li>
+            {["Home", "About", "Courses", "Contact"].map((link) => (
+              <li key={link}>
+                <a
+                  href="#"
+                  className="hover:text-white transition-colors duration-300 justify-center items-center"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
           <h2 className="text-white text-lg font-semibold mb-4">Follow Us</h2>
-          <div className="flex space-x-4">
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Facebook
-            </a>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Twitter
-            </a>
-            <a
-              href="#"
-              className="hover:text-white transition-colors duration-300"
-            >
-              Instagram
-            </a>
+          <div className="flex flex-col space-y-2">
+            {["Facebook", "Twitter", "Instagram"].map((social) => (
+              <a
+                key={social}
+                href="#"
+                className="hover:text-white transition-colors duration-300"
+              >
+                {social}
+              </a>
+            ))}
           </div>
         </div>
         <div>
           <h2 className="text-white text-lg font-semibold mb-4">Contact Us</h2>
           <p>Chha. Shambhajinagar, India</p>
           <p>431001</p>
-          <p>Email: info@rhythmroots.com</p>
-          <p>Phone: (123) 456-7890</p>
+          <p>
+            Email:{" "}
+            <a
+              href="mailto:info@rhythmroots.com"
+              className="hover:text-white transition-colors duration-300"
+            >
+              info@rhythmroots.com
+            </a>
+          </p>
+          <p>
+            Phone:{" "}
+            <a
+              href="tel:+11234567890"
+              className="hover:text-white transition-colors duration-300"
+            >
+              (123) 456-7890
+            </a>
+          </p>
         </div>
       </div>
       <p className="text-center text-xs pt-8">
