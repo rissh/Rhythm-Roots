@@ -14,16 +14,35 @@ function Footer() {
             Quick Links
           </h2>
           <ul>
-            {["Home", "About", "Courses", "Contact"].map((link) => (
-              <li key={link}>
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-300 justify-center items-center"
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
+            {["Home", "About", "Courses", "Contact"].map((link) => {
+              let href;
+              switch (link) {
+                case "Home":
+                  href = "/";
+                  break;
+                case "About":
+                  href = "/";
+                  break;
+                case "Courses":
+                  href = "/courses";
+                  break;
+                case "Contact":
+                  href = "/contact";
+                  break;
+                default:
+                  href = "#";
+              }
+              return (
+                <li key={link}>
+                  <a
+                    href={href}
+                    className="hover:text-white transition-colors duration-300 justify-center items-center"
+                  >
+                    {link}
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div>
