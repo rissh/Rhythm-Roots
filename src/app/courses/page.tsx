@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import courseData from "@/data/music_courses.json";
+import Footer from "@/components/Footer";
 
 function page() {
   return (
@@ -56,6 +57,7 @@ function page() {
           </CardContainer>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
